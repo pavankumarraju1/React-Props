@@ -18,7 +18,12 @@ function App() {
 
             <h1 className="text">Vegetables Store</h1>
             <div className="pos">
-                {vegetables.map(veg)}    
+           {vegetables.map(entry=><Card
+            key={entry.id}
+            img={entry.img}
+            name={entry.name}
+            price={entry.price}
+        />)}
             </div>
             <input type="submit" value="click me" className="btn"></input>
         </div>
